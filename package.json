@@ -1,0 +1,107 @@
+{
+  "description": "A foundation for scalable desktop apps",
+  "keywords": [
+    "typescript",
+    "ts"
+  ],
+  "license": "MIT",
+  "main": "./src/main/main.ts",
+  "scripts": {
+    "lint": "cross-env NODE_ENV=development eslint . --ext .js,.jsx,.ts,.tsx",
+    "test": "jest",
+    "install": "build-opencv --incDir /opt/homebrew/Cellar/opencv/4.9.0_3/include/opencv4 --libDir /opt/homebrew/Cellar/opencv/4.9.0_3/lib --binDir /opt/homebrew/Cellar/opencv/4.9.0_3/bin --nobuild rebuild"
+  },
+  "opencv4nodejs": {
+    "autoBuildOpencvVersion": "4.9.0_3",
+    "disableAutoBuild": "1",
+    "opencvIncludeDir": "/opt/homebrew/Cellar/opencv/4.9.0_3/include/opencv4",
+    "opencvLibDir": "/opt/homebrew/Cellar/opencv/4.9.0_3/lib",
+    "opencvBinDir": "/opt/homebrew/Cellar/opencv/4.9.0_3/bin"
+  },
+  "browserslist": [],
+  "prettier": {
+    "singleQuote": true,
+    "overrides": [
+      {
+        "files": [
+          ".prettierrc",
+          ".eslintrc"
+        ],
+        "options": {
+          "parser": "json"
+        }
+      }
+    ]
+  },
+  "jest": {
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "ts",
+      "json"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/.erb/mocks/fileMock.js"
+    },
+    "transform": {
+      "\\.(ts|js)$": "ts-jest"
+    }
+  },
+  "dependencies": {
+    "@u4/opencv4nodejs": "^6.5.3",
+    "sharp": "^0.33.2"
+  },
+  "devDependencies": {
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.11",
+    "@svgr/webpack": "^8.1.0",
+    "@types/bmp-js": "^0.1.2",
+    "@types/jest": "^29.5.5",
+    "@types/node": "20.6.2",
+    "@types/react-test-renderer": "^18.0.1",
+    "@types/string-width": "^4.0.1",
+    "@types/terser-webpack-plugin": "^5.0.4",
+    "@types/webpack-bundle-analyzer": "^4.6.0",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "browserslist-config-erb": "^0.0.3",
+    "chalk": "^4.1.2",
+    "concurrently": "^8.2.1",
+    "core-js": "^3.32.2",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.49.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-erb": "^4.1.0-0",
+    "eslint-import-resolver-typescript": "^3.6.0",
+    "eslint-import-resolver-webpack": "^0.13.7",
+    "eslint-plugin-compat": "^4.2.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-jest": "^27.4.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.3",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "mini-css-extract-plugin": "^2.7.6",
+    "prettier": "^3.0.3",
+    "rimraf": "^5.0.1",
+    "terser-webpack-plugin": "^5.3.9",
+    "ts-jest": "^29.1.1",
+    "ts-loader": "^9.4.4",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths-webpack-plugin": "^4.1.0",
+    "typescript": "^5.2.2",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.88.2",
+    "webpack-bundle-analyzer": "^4.9.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1",
+    "webpack-merge": "^5.9.0"
+  }
+}
